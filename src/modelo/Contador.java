@@ -1,10 +1,14 @@
 package modelo;
 
 public class Contador {
+	private int contador;
 	public Contador() {
 		super();
 		contador = 0;
 		// TODO Auto-generated constructor stub
+	}
+	public void incrementarContador(){
+		contador++;
 	}
 	public Contador (int valor){
 		this.contador = valor;
@@ -15,7 +19,7 @@ public class Contador {
 		return "Contador [contador=" + contador + "]";
 	}
 
-	private int contador;
+	
 
 	public int getContador() {
 		return contador;

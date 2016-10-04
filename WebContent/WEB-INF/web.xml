@@ -9,14 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <!-- <servlet>
-    <servlet-name >jj</servlet-name>
+  <context-param>
+    <param-name>global1</param-name>
+    <param-value>valor1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>global2</param-name>
+    <param-value>valor2</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>jj</servlet-name>
     <servlet-class>servlets.ListaClicksServlet</servlet-class>
+    <init-param>
+      <param-name>fichero</param-name>
+      <param-value>personas.txt</param-value>
+    </init-param>
+    <init-param>
+      <param-name>driver</param-name>
+      <param-value>jdbc.mysql.org</param-value>
+    </init-param>
   </servlet>
-  <servlet-mapping>
-    <servlet-name >jj</servlet-name>
-    <url-pattern>/Clicks</url-pattern>
-  </servlet-mapping> -->
-  
 </web-app>
