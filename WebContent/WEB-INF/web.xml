@@ -15,7 +15,7 @@
   </context-param>
   <context-param>
     <param-name>global2</param-name>
-    <param-value>valor2</param-value>
+    <param-value>valor3</param-value>
   </context-param>
   <servlet>
     <servlet-name>jj</servlet-name>
@@ -29,4 +29,129 @@
       <param-value>jdbc.mysql.org</param-value>
     </init-param>
   </servlet>
-</web-app>
+  
+ <!--  Mapeo a servlets de los ejemplos de Tomcat
+ -->
+ 
+     <servlet>
+      <servlet-name>ServletToJsp</servlet-name>
+      <servlet-class>servlets.ServletToJsp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChatServlet</servlet-name>
+        <servlet-class>servlets.chat.ChatServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CompressionFilterTestServlet</servlet-name>
+        <servlet-class>servlets.compressionFilters.CompressionFilterTestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelloWorldExample</servlet-name>
+        <servlet-class>servlets.HelloWorldExample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestInfoExample</servlet-name>
+        <servlet-class>servlets.RequestInfoExample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestHeaderExample</servlet-name>
+        <servlet-class>servlets.RequestHeaderExample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestParamExample</servlet-name>
+        <servlet-class>servlets.RequestParamExample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CookieExample</servlet-name>
+        <servlet-class>servlets.CookieExample</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionExample</servlet-name>
+        <servlet-class>servlets.SessionExample</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChatServlet</servlet-name>
+        <url-pattern>/ejemplos/jsp/chat/chat</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CompressionFilterTestServlet</servlet-name>
+        <url-pattern>/CompressionTest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloWorldExample</servlet-name>
+        <url-pattern>/HM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestInfoExample</servlet-name>
+        <url-pattern>/XYZ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestHeaderExample</servlet-name>
+        <url-pattern>/RequestHeaderExample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestParamExample</servlet-name>
+        <url-pattern>/RequestParamExample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CookieExample</servlet-name>
+        <url-pattern>/CookieExample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionExample</servlet-name>
+        <url-pattern>/SessionExample</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletToJsp</servlet-name>
+        <url-pattern>/servletToJsp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>async0</servlet-name>
+      <servlet-class>servlets.async.Async0</servlet-class>
+      <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>async0</servlet-name>
+      <url-pattern>/ejemplos/async/async0</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>async1</servlet-name>
+      <servlet-class>servlets.async.Async1</servlet-class>
+      <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>async1</servlet-name>
+      <url-pattern>/ejemplos/async/async1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>async2</servlet-name>
+      <servlet-class>servlets.async.Async2</servlet-class>
+      <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>async2</servlet-name>
+      <url-pattern>/ejemplos/async/async2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>async3</servlet-name>
+      <servlet-class>servlets.async.Async3</servlet-class>
+      <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>async3</servlet-name>
+      <url-pattern>/ejemplos/async/async3</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>stock</servlet-name>
+      <servlet-class>servlets.async.AsyncStockServlet</servlet-class>
+      <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>stock</servlet-name>
+      <url-pattern>/ejemplos/async/stockticker</url-pattern>
+    </servlet-mapping>
+ 
+ 
+ </web-app>

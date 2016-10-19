@@ -67,7 +67,6 @@ public class ListaClicksServlet extends HttpServlet {
 		clicksContexto.add(clickContexto);
 
 		request.getRequestDispatcher("/jsp/clicksContexto.jsp").forward(request, response);
-		System.out.println("hola");
 	}
 
 	@Override
